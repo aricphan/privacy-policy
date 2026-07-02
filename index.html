@@ -5,22 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - ePubHub Reader</title>
     <style>
-        :root { --primary: #1a73e8; --bg: #f8f9fa; --text: #2c3e50; --border: #e0e0e0; }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        .lang-toggle { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 30px; position: sticky; top: 10px; z-index: 100; }
-        .btn { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-weight: 600; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
-        h1 { color: var(--primary); text-align: center; font-size: 2.2em; border-bottom: 2px solid var(--bg); padding-bottom: 20px; }
-        h2 { color: #1557b0; margin-top: 30px; border-left: 5px solid var(--primary); padding-left: 15px; font-size: 1.3em; }
-        .disclaimer { background: #fff5f5; border: 1px solid #feb2b2; padding: 20px; border-radius: 10px; margin: 20px 0; font-size: 0.95em; }
-        .info-box { background: #e8f0fe; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        :root { --primary-color: #1a73e8; --bg-color: #f8f9fa; --text-color: #2c3e50; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; }
+        .container { max-width: 850px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: relative; }
+        .language-toggle { position: sticky; top: 10px; display: flex; justify-content: flex-end; margin-bottom: 30px; z-index: 100; }
+        .toggle-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: transform 0.2s; }
+        .toggle-btn:hover { transform: scale(1.05); background-color: #1557b0; }
+        h1 { color: var(--primary-color); text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        h2 { color: #1967d2; margin-top: 30px; border-left: 4px solid var(--primary-color); padding-left: 15px; font-size: 1.25em; }
         ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+        li { margin-bottom: 8px; }
         .hidden { display: none; }
-        footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.85em; color: #70757a; }
-        a { color: var(--primary); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        .contact-box { background: #e8f0fe; padding: 20px; border-radius: 8px; margin-top: 40px; }
+        .highlight-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 5px; margin: 15px 0; font-size: 0.95em; }
+        .disclaimer-box { background: #fdf2f2; border: 1px solid #fbd5d5; padding: 15px; border-radius: 5px; margin: 15px 0; font-size: 0.95em; }
+        
+.info-box{
+    margin-top:30px;
+    padding:22px 24px;
+    background:#f8fbff;
+    border:1px solid #d6e4ff;
+    border-left:5px solid #1a73e8;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(26,115,232,.08);
+    line-height:1.8;
+}
+.info-box strong:first-child{
+    display:block;
+    color:#1a73e8;
+    font-size:1.1rem;
+    margin-bottom:10px;
+}
+
+footer { text-align: center; margin-top: 40px; color: #70757a; font-size: 0.85em; }
     </style>
 </head>
 <body>
@@ -145,8 +162,8 @@
 
 <script>
     function toggleLanguage() {
-        const vi = document.getElementById('content-vi');
-        const en = document.getElementById('content-en');
+        const vi = document.getElementById('vi-content');
+        const en = document.getElementById('en-content');
         const btn = document.getElementById('langBtn');
         if (vi.classList.contains('hidden')) {
             vi.classList.remove('hidden');
