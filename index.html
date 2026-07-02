@@ -1,122 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - ePubHub Reader</title>
     <style>
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.7; padding: 40px; max-width: 1000px; margin: auto; color: #2c3e50; background-color: #f8f9fa; }
-        .container { background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        h1 { color: #1a73e8; border-bottom: 2px solid #e8f0fe; padding-bottom: 15px; font-size: 2.2em; }
-        h2 { color: #1967d2; margin-top: 40px; font-size: 1.5em; border-left: 6px solid #1a73e8; padding-left: 15px; }
-        h3 { color: #0d47a1; margin-top: 25px; }
-        p, li { margin-bottom: 12px; text-align: justify; }
-        ul { padding-left: 25px; }
-        .update-date { font-style: italic; color: #70757a; margin-bottom: 30px; }
-        .contact-info { background: #f1f3f4; padding: 25px; border-radius: 8px; margin-top: 40px; border: 1px solid #dadce0; }
-        .lang-nav { margin-bottom: 30px; text-align: right; }
-        .lang-nav a { text-decoration: none; color: #1a73e8; font-weight: bold; margin-left: 15px; }
-        hr { border: 0; height: 1px; background: #dadce0; margin: 60px 0; }
-        .highlight-box { border-left: 4px solid #f4b400; background: #fff9e6; padding: 15px; margin: 20px 0; }
+        :root {
+            --primary-color: #1a73e8;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* Nút chuyển đổi ngôn ngữ */
+        .language-toggle {
+            position: sticky;
+            top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+            z-index: 100;
+        }
+
+        .toggle-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.05);
+            background-color: #1557b0;
+        }
+
+        h1 { color: var(--primary-color); text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        h2 { color: #1967d2; margin-top: 30px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
+        h3 { color: #16a085; }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        
+        .hidden { display: none; }
+        
+        .contact-box {
+            background: #e8f0fe;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        footer { text-align: center; margin-top: 40px; color: #70757a; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="lang-nav">
-        <a href="#en">English Version</a>
-        <a href="#vi">Tiếng Việt</a>
+    <div class="language-toggle">
+        <button id="langBtn" class="toggle-btn" onclick="toggleLanguage()">Switch to English</button>
     </div>
 
-    <section id="en">
-        <h1>Privacy Policy for ePubHub</h1>
-        <div class="update-date">Last Updated: October 26, 2024</div>
+    <!-- NỘI DUNG TIẾNG VIỆT -->
+    <div id="content-vi">
+        <h1>Chính sách Bảo mật ePubHub</h1>
+        <p><em>Cập nhật lần cuối: 26 tháng 10, 2024</em></p>
+        
+        <p>Chào mừng bạn đến với ePubHub. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn và đảm bảo tính minh bạch trong việc xử lý dữ liệu.</p>
 
-        <p>Welcome to ePubHub ("we", "our", or "us"). We are committed to protecting the privacy of our users. This Privacy Policy describes how we collect, use, process, and distribute your information, including Personal Data, when you use our mobile application and related services.</p>
-
-        <h2>1. Information We Collect</h2>
-        <h3>1.1. Information You Provide to Us</h3>
+        <h2>1. Dữ liệu Chúng tôi Thu thập</h2>
         <ul>
-            <li><strong>Account Information:</strong> When you register or sign in via Google Services, we collect your name, email address, profile picture URL, and a unique identifier (Firebase UID/User ID).</li>
-            <li><strong>User Profile:</strong> Any information you choose to update in your profile, such as a custom username or updated avatar (processed via UCrop).</li>
-            <li><strong>User-Generated Content (UGC):</strong> This includes messages, text, and media you send via our Chat feature, which are stored in the Firebase Realtime Database.</li>
-            <li><strong>Shared Files:</strong> EPUB/TXT files you voluntarily upload to our "Cloud Share" feature (hosted via Cloudinary) to share with the community.</li>
+            <li><strong>Thông tin định danh:</strong> Email, Tên hiển thị và Ảnh đại diện (thu thập qua Google Sign-In) để quản lý tài khoản.</li>
+            <li><strong>Mã định danh thiết bị:</strong> Android ID để quản lý phiên đăng nhập và giới hạn tối đa 2 thiết bị/tài khoản.</li>
+            <li><strong>Tiến trình đọc sách:</strong> Vị trí chương và dòng đang đọc được đồng bộ lên Cloud để bạn có thể đọc tiếp trên thiết bị khác.</li>
+            <li><strong>Thống kê hoạt động:</strong> Tổng thời gian đọc/nghe, chuỗi ngày đọc (streak) và kết quả các trò chơi tích hợp (Cờ caro, Cờ vua).</li>
         </ul>
 
-        <h3>1.2. Information Collected Automatically</h3>
+        <h2>2. Nội dung do Người dùng Tạo (UGC)</h2>
         <ul>
-            <li><strong>Device Identifiers:</strong> We collect your Android ID and device hardware model to manage sessions and enforce the limit of 2 active devices per account.</li>
-            <li><strong>Usage Statistics:</strong> Reading progress (current chapter/line), total listening time, daily reading streaks, and game achievements (Gomoku/Chess) are collected to synchronize across your devices.</li>
-            <li><strong>Log Data:</strong> In the event of an app crash, we may collect technical logs via Firebase Crashlytics to improve stability.</li>
+            <li><strong>Chat cộng đồng:</strong> Tin nhắn bạn gửi được lưu trữ trên Firebase để hiển thị cho cộng đồng.</li>
+            <li><strong>Chia sẻ tệp:</strong> Nếu bạn dùng tính năng Cloud, tệp EPUB/TXT sẽ được tải lên máy chủ Cloudinary để chia sẻ.</li>
+            <li><strong>Kết nối P2P:</strong> Chúng tôi dùng WebRTC để truyền file trực tiếp giữa người dùng nhưng không lưu trữ nội dung file này trên máy chủ.</li>
         </ul>
 
-        <h3>1.3. Sensitive Data Handling</h3>
+        <h2>3. Bảo mật Đặc biệt</h2>
         <div class="highlight-box">
-            <strong>PGP/GPG Data:</strong> Our application supports PGP/GPG decryption. All cryptographic operations occur locally on your device. We <strong>never</strong> upload or store your private keys or the decrypted content of your secure files on our servers.
+            <strong>Mã hóa PGP/GPG:</strong> Mọi hoạt động giải mã diễn ra cục bộ trên máy bạn. Chúng tôi KHÔNG bao giờ lưu trữ Khóa bí mật (Private Key) của bạn.
         </div>
 
-        <h2>2. How We Use Your Information</h2>
-        <ul>
-            <li><strong>To Provide Services:</strong> To manage your account, verify your subscription status (VIP/Admin), and synchronize your reading library.</li>
-            <li><strong>To Enable Social Features:</strong> To facilitate chat interactions, P2P file transfers (using WebRTC signaling), and public file sharing.</li>
-            <li><strong>To Improve the App:</strong> We use synthesized usage data to optimize our TTS (Text-to-Speech) performance and game balancing.</li>
-            <li><strong>Security:</strong> To detect and prevent fraud, unauthorized device access, and to enforce our community guidelines.</li>
-        </ul>
+        <h2>4. Dịch vụ Bên thứ ba</h2>
+        <p>Chúng tôi sử dụng dịch vụ từ: Google Firebase (hạ tầng), Cloudinary (lưu trữ file), Microsoft (dịch vụ giọng nói TTS trực tuyến).</p>
 
-        <h2>3. Data Sharing and Disclosure</h2>
-        <p>We do not sell your personal data. We share information only with the following service providers necessary for app functionality:</p>
-        <ul>
-            <li><strong>Google Firebase:</strong> For cloud hosting, authentication, and real-time database services.</li>
-            <li><strong>Cloudinary:</strong> For hosting files shared by users via the "Cloud" feature.</li>
-            <li><strong>Microsoft:</strong> When using Online TTS (Microsoft Edge TTS), text segments are sent to Microsoft's servers for audio synthesis. This data is processed temporarily and not stored.</li>
-            <li><strong>Other Users:</strong> Your display name and profile picture are visible to other users when you participate in Chat or share files.</li>
-        </ul>
+        <h2>5. Quy trình Xóa Dữ liệu</h2>
+        <p>Bạn có thể xóa toàn bộ dữ liệu vĩnh viễn bằng cách vào <strong>Tài khoản -> Xóa tài khoản</strong> ngay trong ứng dụng. Mọi thông tin trên Cloud sẽ bị xóa sạch ngay lập tức.</p>
 
-        <h2>4. Data Retention and Deletion</h2>
-        <p>We retain your information as long as your account is active. We provide a clear path for data removal:</p>
-        <ul>
-            <li><strong>In-App Deletion:</strong> You can use the "Delete Account" feature in the settings. This action triggers an automated process to delete your Firestore profile, Realtime Database messages, and Firebase Auth records.</li>
-            <li><strong>Manual Request:</strong> You may contact us via email to request manual deletion of any data associated with your identity.</li>
-        </ul>
-
-        <h2>5. Children's Privacy</h2>
-        <p>ePubHub does not knowingly collect or solicit personal information from anyone under the age of 13. If we learn that we have collected personal information from a child under age 13, we will delete that information as quickly as possible.</p>
-
-        <h2>6. User Rights (GDPR/CCPA)</h2>
-        <p>Depending on your location, you have the right to access, correct, or delete your personal data. You may also object to the processing of your data in certain circumstances.</p>
-    </section>
-
-    <hr>
-
-    <section id="vi">
-        <h1>Chính sách Bảo mật ePubHub</h1>
-        <div class="update-date">Cập nhật lần cuối: 26 tháng 10, 2024</div>
-
-        <h2>1. Thu thập Thông tin</h2>
-        <p>Chúng tôi thu thập thông tin để cung cấp trải nghiệm đọc sách và tương tác cộng đồng tốt nhất:</p>
-        <ul>
-            <li><strong>Thông tin Tài khoản:</strong> Email, tên và ảnh đại diện khi đăng nhập Google.</li>
-            <li><strong>Dữ liệu Hoạt động:</strong> Tiến trình đọc, thời gian nghe sách, chuỗi ngày đọc và thành tích trò chơi (Cờ caro, Cờ vua).</li>
-            <li><strong>Nội dung Người dùng:</strong> Tin nhắn trong mục Chat và các tệp tin EPUB/TXT bạn chọn chia sẻ lên hệ thống Cloud của chúng tôi.</li>
-            <li><strong>Dữ liệu Thiết bị:</strong> Mã định danh Android ID để quản lý giới hạn đăng nhập trên 2 thiết bị.</li>
-        </ul>
-
-        <h2>2. Xử lý Dữ liệu Nhạy cảm</h2>
-        <p>Đối với tính năng giải mã PGP/GPG, mọi thao tác đều diễn ra cục bộ trên máy của bạn. Chúng tôi cam kết không lưu trữ khóa bí mật (Private Key) hay nội dung tệp đã giải mã trên bất kỳ máy chủ nào.</p>
-
-        <h2>3. Chia sẻ dữ liệu</h2>
-        <p>Chúng tôi chỉ chia sẻ dữ liệu với các đối tác hạ tầng như Google Firebase (lưu trữ), Cloudinary (tệp tin chia sẻ) và Microsoft (dịch vụ TTS trực tuyến). Chúng tôi tuyệt đối không bán thông tin cá nhân của bạn cho bên thứ ba.</p>
-
-        <h2>4. Quyền Xóa Tài khoản</h2>
-        <p>Người dùng có toàn quyền xóa tài khoản và mọi dữ liệu liên quan (tin nhắn, tiến trình, thông tin cá nhân) ngay trong ứng dụng thông qua menu "Xóa tài khoản". Dữ liệu sẽ được xóa vĩnh viễn khỏi hệ thống sau khi yêu cầu được thực hiện.</p>
-    </section>
-
-    <div class="contact-info">
-        <h2>Contact Us / Liên hệ</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-        <p><strong>Email:</strong> aricphan@gmail.com</p>
+        <div class="contact-box">
+            <h2>Liên hệ</h2>
+            <p>Email hỗ trợ: <strong>[EMAIL_CỦA_BẠN]@gmail.com</strong></p>
+        </div>
     </div>
+
+    <!-- NỘI DUNG TIẾNG ANH (ẨN MẶC ĐỊNH) -->
+    <div id="content-en" class="hidden">
+        <h1>Privacy Policy - ePubHub</h1>
+        <p><em>Last Updated: October 26, 2024</em></p>
+
+        <p>Welcome to ePubHub. We are committed to protecting your privacy and ensuring transparency in data processing.</p>
+
+        <h2>1. Information We Collect</h2>
+        <ul>
+            <li><strong>Personal Info:</strong> Email, Display Name, and Profile Picture (via Google Sign-In) for account management.</li>
+            <li><strong>Device ID:</strong> Android ID to manage login sessions (limit of 2 devices per account).</li>
+            <li><strong>Reading Progress:</strong> Chapter and line positions synced to Cloud for cross-device experience.</li>
+            <li><strong>Activity Stats:</strong> Total reading/listening time, streaks, and game scores (Gomoku, Chess).</li>
+        </ul>
+
+        <h2>2. User-Generated Content (UGC)</h2>
+        <ul>
+            <li><strong>Community Chat:</strong> Messages are stored on Firebase to be displayed to other users.</li>
+            <li><strong>File Sharing:</strong> EPUB/TXT files are uploaded to Cloudinary servers when you use the Cloud feature.</li>
+            <li><strong>P2P Transfer:</strong> We use WebRTC for direct file transfers; we do not store these files on our servers.</li>
+        </ul>
+
+        <h2>3. Specialized Security</h2>
+        <div class="highlight-box">
+            <strong>PGP/GPG Encryption:</strong> All decryption happens locally on your device. We NEVER store your Private Keys or decrypted content.
+        </div>
+
+        <h2>4. Third-Party Services</h2>
+        <p>We use services from: Google Firebase (Infrastructure), Cloudinary (Storage), Microsoft (Online TTS services).</p>
+
+        <h2>5. Data Deletion</h2>
+        <p>You can permanently delete your data by going to <strong>Account -> Delete Account</strong> within the app. All cloud data will be removed immediately.</p>
+
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+            <p>Support Email: <strong>aricphan@gmail.com</strong></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ePubHub Reader. All Rights Reserved.</p>
+    </footer>
 </div>
+
+<script>
+    function toggleLanguage() {
+        const vi = document.getElementById('content-vi');
+        const en = document.getElementById('content-en');
+        const btn = document.getElementById('langBtn');
+
+        if (vi.classList.contains('hidden')) {
+            vi.classList.remove('hidden');
+            en.classList.add('hidden');
+            btn.innerText = 'Switch to English';
+        } else {
+            vi.classList.add('hidden');
+            en.classList.remove('hidden');
+            btn.innerText = 'Chuyển sang Tiếng Việt';
+        }
+    }
+</script>
 
 </body>
 </html>
