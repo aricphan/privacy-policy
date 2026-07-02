@@ -30,7 +30,6 @@
             position: relative;
         }
 
-        /* Nút chuyển đổi ngôn ngữ */
         .language-toggle {
             position: sticky;
             top: 10px;
@@ -59,7 +58,6 @@
 
         h1 { color: var(--primary-color); text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px; }
         h2 { color: #1967d2; margin-top: 30px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
-        h3 { color: #16a085; }
         
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
@@ -76,6 +74,14 @@
         .highlight-box {
             background: #fff3cd;
             border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .disclaimer-box {
+            background: #fdf2f2;
+            border: 1px solid #fbd5d5;
             padding: 15px;
             border-radius: 5px;
             margin: 15px 0;
@@ -100,29 +106,38 @@
 
         <h2>1. Dữ liệu Chúng tôi Thu thập</h2>
         <ul>
-            <li><strong>Thông tin định danh:</strong> Email, Tên hiển thị và Ảnh đại diện (thu thập qua Google Sign-In) để quản lý tài khoản.</li>
-            <li><strong>Mã định danh thiết bị:</strong> Android ID để quản lý phiên đăng nhập và giới hạn tối đa 2 thiết bị/tài khoản.</li>
-            <li><strong>Tiến trình đọc sách:</strong> Vị trí chương và dòng đang đọc được đồng bộ lên Cloud để bạn có thể đọc tiếp trên thiết bị khác.</li>
-            <li><strong>Thống kê hoạt động:</strong> Tổng thời gian đọc/nghe, chuỗi ngày đọc (streak) và kết quả các trò chơi tích hợp (Cờ caro, Cờ vua).</li>
+            <li><strong>Thông tin định danh:</strong> Email, Tên hiển thị và Ảnh đại diện (qua Google Sign-In) để quản lý tài khoản.</li>
+            <li><strong>Mã định danh thiết bị:</strong> Android ID để quản lý phiên đăng nhập (tối đa 2 thiết bị/tài khoản).</li>
+            <li><strong>Tiến trình đọc sách:</strong> Vị trí chương và dòng đang đọc được đồng bộ lên Cloud để đồng bộ giữa các thiết bị.</li>
+            <li><strong>Thống kê hoạt động:</strong> Tổng thời gian đọc/nghe, chuỗi ngày đọc và kết quả các trò chơi.</li>
         </ul>
 
         <h2>2. Nội dung do Người dùng Tạo (UGC)</h2>
         <ul>
-            <li><strong>Chat cộng đồng:</strong> Tin nhắn bạn gửi được lưu trữ trên Firebase để hiển thị cho cộng đồng.</li>
-            <li><strong>Chia sẻ tệp:</strong> Nếu bạn dùng tính năng Cloud, tệp EPUB/TXT sẽ được tải lên máy chủ Cloudinary để chia sẻ.</li>
-            <li><strong>Kết nối P2P:</strong> Chúng tôi dùng WebRTC để truyền file trực tiếp giữa người dùng nhưng không lưu trữ nội dung file này trên máy chủ.</li>
+            <li><strong>Chat cộng đồng:</strong> Tin nhắn được lưu trữ trên Firebase để duy trì hội thoại.</li>
+            <li><strong>Chia sẻ tệp:</strong> Tính năng Cloud cho phép lưu trữ tài liệu cá nhân. Hệ thống cung cấp hạ tầng kỹ thuật và <strong>không thực hiện kiểm duyệt nội dung</strong> trước khi tải lên.</li>
+            <li><strong>Trách nhiệm cá nhân:</strong> Bằng việc sử dụng tính năng chia sẻ, bạn xác nhận mình có quyền hợp pháp đối với nội dung đó. Người dùng chịu trách nhiệm duy nhất về tính pháp lý của tệp tin được truyền tải.</li>
+            <li><strong>Cơ chế giám sát:</strong> Chúng tôi cung cấp công cụ báo cáo (Report) để cộng đồng giám sát. Nội dung vi phạm quy chuẩn sẽ bị gỡ bỏ mà không cần thông báo.</li>
         </ul>
 
         <h2>3. Bảo mật Đặc biệt</h2>
         <div class="highlight-box">
-            <strong>Mã hóa PGP/GPG:</strong> Mọi hoạt động giải mã diễn ra cục bộ trên máy bạn. Chúng tôi KHÔNG bao giờ lưu trữ Khóa bí mật (Private Key) của bạn.
+            <strong>Mã hóa PGP/GPG:</strong> Mọi hoạt động giải mã diễn ra cục bộ trên máy bạn. Chúng tôi KHÔNG bao giờ lưu trữ Khóa bí mật (Private Key) hay nội dung sau giải mã.
         </div>
 
         <h2>4. Dịch vụ Bên thứ ba</h2>
-        <p>Chúng tôi sử dụng dịch vụ từ: Google Firebase (hạ tầng), Cloudinary (lưu trữ file), Microsoft (dịch vụ giọng nói TTS trực tuyến).</p>
+        <p>Ứng dụng sử dụng: Google Firebase (hạ tầng), Cloudinary (lưu trữ file), Microsoft Azure (dịch vụ giọng nói trực tuyến).</p>
 
         <h2>5. Quy trình Xóa Dữ liệu</h2>
-        <p>Bạn có thể xóa toàn bộ dữ liệu vĩnh viễn bằng cách vào <strong>Tài khoản -> Xóa tài khoản</strong> ngay trong ứng dụng. Mọi thông tin trên Cloud sẽ bị xóa sạch ngay lập tức.</p>
+        <p>Bạn có thể xóa toàn bộ dữ liệu vĩnh viễn tại mục <strong>Tài khoản -> Xóa tài khoản</strong>. Mọi thông tin trên Cloud sẽ bị xóa sạch ngay lập tức.</p>
+
+        <h2>6. Giới hạn và Miễn trừ trách nhiệm</h2>
+        <div class="disclaimer-box">
+            <ul>
+                <li>ePubHub hoạt động như một công cụ hỗ trợ đọc và quản lý tệp tin cá nhân. Chúng tôi không sở hữu và không chịu trách nhiệm về nguồn gốc dữ liệu do người dùng tự trao đổi.</li>
+                <li>Mọi hoạt động truyền tải dữ liệu là sự thỏa thuận tự nguyện giữa các cá nhân. Chúng tôi được miễn trừ khỏi mọi khiếu nại phát sinh từ việc người dùng lưu trữ hoặc truyền phát nội dung vi phạm quyền sở hữu trí tuệ của bên thứ ba.</li>
+            </ul>
+        </div>
 
         <div class="contact-box">
             <h2>Liên hệ</h2>
@@ -139,29 +154,38 @@
 
         <h2>1. Information We Collect</h2>
         <ul>
-            <li><strong>Personal Info:</strong> Email, Display Name, and Profile Picture (via Google Sign-In) for account management.</li>
-            <li><strong>Device ID:</strong> Android ID to manage login sessions (limit of 2 devices per account).</li>
-            <li><strong>Reading Progress:</strong> Chapter and line positions synced to Cloud for cross-device experience.</li>
-            <li><strong>Activity Stats:</strong> Total reading/listening time, streaks, and game scores (Gomoku, Chess).</li>
+            <li><strong>Personal Info:</strong> Email, Display Name, and Profile Picture (via Google Sign-In).</li>
+            <li><strong>Device ID:</strong> Android ID to manage login sessions (max 2 devices).</li>
+            <li><strong>Reading Progress:</strong> Synced to Cloud for a seamless cross-device experience.</li>
+            <li><strong>Activity Stats:</strong> Total time, streaks, and game scores.</li>
         </ul>
 
         <h2>2. User-Generated Content (UGC)</h2>
         <ul>
-            <li><strong>Community Chat:</strong> Messages are stored on Firebase to be displayed to other users.</li>
-            <li><strong>File Sharing:</strong> EPUB/TXT files are uploaded to Cloudinary servers when you use the Cloud feature.</li>
-            <li><strong>P2P Transfer:</strong> We use WebRTC for direct file transfers; we do not store these files on our servers.</li>
+            <li><strong>Community Chat:</strong> Messages are stored via Firebase.</li>
+            <li><strong>File Sharing:</strong> Cloud storage is provided for personal document management. The service acts as a technical intermediary and <strong>does not pre-screen</strong> uploaded content.</li>
+            <li><strong>User Responsibility:</strong> By using sharing features, you represent that you hold all necessary rights. Users are solely responsible for the legality of the files they transmit.</li>
+            <li><strong>Moderation:</strong> We provide reporting tools to flag inappropriate content. Content violating community standards will be removed without notice.</li>
         </ul>
 
         <h2>3. Specialized Security</h2>
         <div class="highlight-box">
-            <strong>PGP/GPG Encryption:</strong> All decryption happens locally on your device. We NEVER store your Private Keys or decrypted content.
+            <strong>PGP/GPG Encryption:</strong> All decryption happens locally. We NEVER store Private Keys or decrypted content.
         </div>
 
         <h2>4. Third-Party Services</h2>
-        <p>We use services from: Google Firebase (Infrastructure), Cloudinary (Storage), Microsoft (Online TTS services).</p>
+        <p>Infrastructure: Google Firebase, Cloudinary, Microsoft TTS.</p>
 
         <h2>5. Data Deletion</h2>
-        <p>You can permanently delete your data by going to <strong>Account -> Delete Account</strong> within the app. All cloud data will be removed immediately.</p>
+        <p>Available in <strong>Account -> Delete Account</strong>. All data is removed immediately upon request.</p>
+
+        <h2>6. Disclaimer of Liability</h2>
+        <div class="disclaimer-box">
+            <ul>
+                <li>ePubHub is a tool for personal file management and reading. We do not own or assume liability for the source of user-exchanged data.</li>
+                <li>Data transmission is a voluntary activity between individuals. We shall be held harmless from any claims arising from users' utilization of the app to store or transmit content that infringes upon third-party intellectual property rights.</li>
+            </ul>
+        </div>
 
         <div class="contact-box">
             <h2>Contact Us</h2>
