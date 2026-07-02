@@ -145,15 +145,18 @@
 </div>
 
 <script>
-    function toggleLang(lang) {
-        const vi = document.getElementById('vi-content');
-        const en = document.getElementById('en-content');
-        if (lang === 'vi') {
+    function toggleLanguage() {
+        const vi = document.getElementById('content-vi');
+        const en = document.getElementById('content-en');
+        const btn = document.getElementById('langBtn');
+        if (vi.classList.contains('hidden')) {
             vi.classList.remove('hidden');
             en.classList.add('hidden');
+            btn.innerText = 'Switch to English';
         } else {
             vi.classList.add('hidden');
             en.classList.remove('hidden');
+            btn.innerText = 'Chuyển sang Tiếng Việt';
         }
     }
 </script>
