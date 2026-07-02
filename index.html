@@ -106,55 +106,64 @@
 
         <h2>1. Dữ liệu Chúng tôi Thu thập</h2>
         <ul>
-            <li><strong>Thông tin định danh:</strong> Email, Tên hiển thị và Ảnh đại diện (qua Google Sign-In) để quản lý tài khoản và định danh người dùng trong hội thoại.</li>
-            <li><strong>Mã định danh thiết bị:</strong> Android ID để quản lý phiên đăng nhập (tối đa 2 thiết bị/tài khoản).</li>
-            <li><strong>Tiến trình đọc sách:</strong> Vị trí chương và dòng đang đọc được đồng bộ lên Cloud để bạn có thể tiếp tục trải nghiệm trên nhiều thiết bị.</li>
-            <li><strong>Thống kê hoạt động:</strong> Tổng thời gian đọc/nghe, chuỗi ngày đọc và kết quả các trò chơi tích hợp.</li>
+            <li><strong>Thông tin định danh:</strong> Email, Tên hiển thị và Ảnh đại diện (qua Google Sign-In) để quản lý tài khoản.</li>
+            <li><strong>Mã định danh thiết bị:</strong> Android ID để quản lý phiên đăng nhập và bảo mật tài khoản.</li>
+            <li><strong>Tiến trình đọc sách:</strong> Vị trí chương và dòng đang đọc được đồng bộ lên Cloud.</li>
+            <li><strong>Dữ liệu chẩn đoán:</strong> Thông tin về lỗi (crash logs) và hiệu suất ứng dụng để cải thiện trải nghiệm.</li>
         </ul>
 
         <h2>2. Nội dung do Người dùng Tạo (UGC)</h2>
         <ul>
-            <li><strong>Chat cộng đồng:</strong> Tin nhắn được lưu trữ trên Firebase để hiển thị trong phòng chat.</li>
-            <li><strong>Chia sẻ tệp:</strong> Tính năng Cloud cho phép lưu trữ tài liệu cá nhân. Hệ thống đóng vai trò trung gian kỹ thuật và <strong>không thực hiện tiền kiểm</strong> nội dung tải lên.</li>
-            <li><strong>Trách nhiệm cá nhân:</strong> Người dùng chịu trách nhiệm duy nhất và toàn bộ về tính pháp lý của tệp tin mình chia sẻ. Bạn xác nhận có đủ quyền sở hữu hoặc sử dụng hợp pháp đối với nội dung đó.</li>
-            <li><strong>Cơ chế báo cáo:</strong> Chúng tôi cung cấp nút Báo cáo (Report) và Chặn (Block) để cộng đồng giám sát. Nội dung vi phạm sẽ bị gỡ bỏ mà không cần thông báo trước.</li>
+            <li><strong>Chat cộng đồng:</strong> Tin nhắn được lưu trữ trên Firebase để hiển thị hội thoại công khai.</li>
+            <li><strong>Chia sẻ tệp:</strong> Tính năng Cloud cho phép lưu trữ tài liệu cá nhân. Hệ thống đóng vai trò trung gian kỹ thuật và <strong>không thực hiện kiểm duyệt</strong> nội dung tải lên.</li>
+            <li><strong>Trách nhiệm cá nhân:</strong> Người dùng chịu trách nhiệm duy nhất về tính pháp lý của tệp tin chia sẻ. Bạn xác nhận có quyền hợp pháp đối với nội dung đó.</li>
+            <li><strong>Giám sát:</strong> Chúng tôi cung cấp công cụ Báo cáo (Report) và Chặn (Block). Nội dung vi phạm sẽ bị gỡ bỏ ngay lập tức.</li>
         </ul>
 
         <h2>3. Bảo mật Đặc biệt</h2>
         <div class="highlight-box">
-            <strong>Mã hóa PGP/GPG:</strong> Mọi hoạt động giải mã diễn ra cục bộ trên máy bạn. Chúng tôi KHÔNG bao giờ lưu trữ Khóa bí mật (Private Key) hay nội dung sau giải mã của bạn.
+            <strong>Mã hóa PGP/GPG:</strong> Mọi hoạt động giải mã diễn ra cục bộ trên thiết bị. Chúng tôi KHÔNG lưu trữ Khóa bí mật (Private Key) hay nội dung thô của bạn.
         </div>
 
         <h2>4. Dịch vụ Bên thứ ba</h2>
-        <p>Ứng dụng tích hợp dịch vụ từ: Google Firebase (hạ tầng), Cloudinary (lưu trữ file), Microsoft Azure (giọng nói TTS), <strong>Google AdMob (quảng cáo)</strong> và <strong>Google Play Billing (thanh toán)</strong>.</p>
+        <p>Chúng tôi sử dụng: Google Firebase (hạ tầng & chẩn đoán), Cloudinary (lưu trữ), Microsoft Azure (giọng nói), Google AdMob (quảng cáo) và Google Play Billing (thanh toán).</p>
 
         <h2>5. Thanh toán và Gói VIP</h2>
         <ul>
-            <li><strong>Giao dịch:</strong> Mọi thanh toán mua gói VIP hoặc vật phẩm đều được thực hiện thông qua hệ thống thanh toán của Google Play. Chúng tôi không thu thập hay lưu trữ thông tin thẻ tín dụng của bạn.</li>
-            <li><strong>Quyền lợi VIP:</strong> Khi nâng cấp VIP, bạn được sử dụng các tính năng nâng cao (Video background, không quảng cáo...). Trạng thái VIP được liên kết với ID tài khoản của bạn.</li>
-            <li><strong>Hoàn tiền:</strong> Chính sách hoàn tiền tuân thủ theo quy định hiện hành của Google Play Store.</li>
+            <li>Mọi giao dịch thanh toán đều qua Google Play Billing. Chúng tôi không lưu giữ thông tin thẻ tín dụng.</li>
+            <li>Quyền lợi VIP (xóa quảng cáo, video background...) được liên kết theo ID tài khoản.</li>
         </ul>
 
-        <h2>6. Quảng cáo</h2>
+        <h2>6. Quyền truy cập thiết bị</h2>
         <ul>
-            <li>Để duy trì các tính năng miễn phí, ePubHub hiển thị quảng cáo từ Google AdMob.</li>
-            <li>Đối tác có thể thu thập mã định danh quảng cáo (Android Advertising ID) để cung cấp quảng cáo cá nhân hóa. Bạn có thể đặt lại mã này trong Cài đặt thiết bị của mình.</li>
+            <li><strong>Bộ nhớ (Storage):</strong> Để đọc và lưu trữ các tệp sách EPUB/TXT.</li>
+            <li><strong>Máy ảnh (Camera):</strong> Để cập nhật ảnh đại diện (nếu bạn yêu cầu).</li>
+            <li><strong>Thông báo (Notifications):</strong> Để cập nhật tiến trình tải lên hoặc tin nhắn mới.</li>
         </ul>
 
-        <h2>7. Giới hạn và Miễn trừ trách nhiệm</h2>
+        <h2>7. Quảng cáo</h2>
+        <p>Đối tác quảng cáo (Google AdMob) có thể sử dụng mã định danh quảng cáo (Advertising ID) để cung cấp quảng cáo phù hợp. Bạn có thể quản lý điều này trong phần Cài đặt của Google trên điện thoại.</p>
+
+        <h2>8. Giới hạn và Miễn trừ trách nhiệm</h2>
         <div class="disclaimer-box">
             <ul>
-                <li>ePubHub là công cụ hỗ trợ đọc và quản lý tệp tin cho mục đích cá nhân. Chúng tôi không sở hữu và không chịu trách nhiệm về nội dung dữ liệu do người dùng tự trao đổi.</li>
-                <li>Mọi hoạt động chia sẻ dữ liệu là sự thỏa thuận tự nguyện giữa các cá nhân. Chúng tôi được miễn trừ khỏi mọi khiếu nại phát sinh từ việc người dùng truyền tải nội dung vi phạm quyền sở hữu trí tuệ của bên thứ ba.</li>
+                <li>ePubHub là công cụ hỗ trợ đọc và quản lý tệp tin cho mục đích cá nhân. Chúng tôi không chịu trách nhiệm về nội dung hoặc nguồn gốc dữ liệu do người dùng tự trao đổi.</li>
+                <li>Mọi hoạt động chia sẻ là tự nguyện. Chúng tôi miễn trừ trách nhiệm đối với các khiếu nại về quyền sở hữu trí tuệ phát sinh từ hành vi của người dùng.</li>
             </ul>
         </div>
 
-        <h2>8. Quy trình Xóa Dữ liệu</h2>
-        <p>Bạn có thể xóa toàn bộ dữ liệu vĩnh viễn ngay trong ứng dụng tại mục <strong>Tài khoản -> Xóa tài khoản</strong>. Mọi thông tin cá nhân và dữ liệu trên Cloud sẽ bị xóa sạch ngay lập tức.</p>
+        <h2>9. Quyền riêng tư của trẻ em</h2>
+        <p>Ứng dụng không dành cho trẻ em dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin từ đối tượng này. Nếu phát hiện dữ liệu trẻ em được thu thập trái phép, chúng tôi sẽ xóa bỏ ngay lập tức.</p>
+
+        <h2>10. Thay đổi chính sách</h2>
+        <p>Chúng tôi có thể cập nhật chính sách này bất cứ lúc nào. Các thay đổi sẽ có hiệu lực ngay khi được đăng tải tại đây.</p>
+
+        <h2>11. Xóa dữ liệu</h2>
+        <p>Bạn có thể xóa vĩnh viễn dữ liệu tại <strong>Tài khoản -> Xóa tài khoản</strong>. Mọi dữ liệu Cloud sẽ biến mất vĩnh viễn.</p>
 
         <div class="contact-box">
             <h2>Liên hệ</h2>
-            <p>Email hỗ trợ: <strong>aricphan@gmail.com</strong></p>
+            <p>Email: <strong>aricphan@gmail.com</strong></p>
         </div>
     </div>
 
@@ -167,301 +176,61 @@
 
         <h2>1. Information We Collect</h2>
         <ul>
-            <li><strong>Personal Info:</strong> Email, Display Name, and Profile Picture (via Google Sign-In) for account management.</li>
-            <li><strong>Device ID:</strong> Android ID to manage login sessions (max 2 devices).</li>
-            <li><strong>Reading Progress:</strong> Synced to Cloud for a seamless cross-device experience.</li>
-            <li><strong>Activity Stats:</strong> Total reading time, streaks, and game scores.</li>
+            <li><strong>Identity:</strong> Email, Name, and Profile Picture (via Google Sign-In).</li>
+            <li><strong>Device ID:</strong> Android ID for session management and security.</li>
+            <li><strong>Reading Progress:</strong> Synced to Cloud for a seamless experience.</li>
+            <li><strong>Diagnostics:</strong> Crash logs and performance data to improve the app.</li>
         </ul>
 
         <h2>2. User-Generated Content (UGC)</h2>
         <ul>
-            <li><strong>Community Chat:</strong> Messages are stored via Firebase to facilitate conversation.</li>
-            <li><strong>File Sharing:</strong> Cloud storage is provided for personal document management. The service acts as a technical intermediary and <strong>does not pre-screen</strong> uploaded content.</li>
-            <li><strong>User Responsibility:</strong> Users are solely responsible for the legality of the files they transmit. You represent that you hold all necessary rights for such content.</li>
-            <li><strong>Moderation:</strong> We provide Report and Block tools. Content violating community standards or laws will be removed without notice.</li>
+            <li><strong>Community Chat:</strong> Messages are stored on Firebase for public display.</li>
+            <li><strong>File Sharing:</strong> Cloud storage is for personal document management. We act as a technical intermediary and <strong>do not pre-screen</strong> uploaded content.</li>
+            <li><strong>User Responsibility:</strong> You are solely responsible for the legality of shared files. You represent that you own the rights to such content.</li>
+            <li><strong>Moderation:</strong> Report and Block tools are available. Violating content will be removed immediately.</li>
         </ul>
 
         <h2>3. Specialized Security</h2>
         <div class="highlight-box">
-            <strong>PGP/GPG Encryption:</strong> All decryption happens locally. We NEVER store Private Keys or decrypted content.
+            <strong>PGP/GPG Encryption:</strong> Decryption happens locally. We NEVER store Private Keys or decrypted content.
         </div>
 
         <h2>4. Third-Party Services</h2>
-        <p>We use: Google Firebase, Cloudinary, Microsoft TTS, <strong>Google AdMob (Ads)</strong>, and <strong>Google Play Billing (Payments)</strong>.</p>
+        <p>We use: Google Firebase, Cloudinary, Microsoft TTS, Google AdMob, and Google Play Billing.</p>
 
-        <h2>5. Payments and VIP Subscription</h2>
+        <h2>5. Payments and VIP</h2>
+        <p>All transactions are handled via Google Play Billing. VIP benefits are linked to your account ID.</p>
+
+        <h2>6. Device Permissions</h2>
         <ul>
-            <li><strong>Transactions:</strong> All purchases are processed securely via Google Play Billing. We do not store your credit card information.</li>
-            <li><strong>VIP Benefits:</strong> Upgrading to VIP unlocks premium features (Video backgrounds, no ads). Your status is linked to your account ID.</li>
-            <li><strong>Refunds:</strong> Refund policies follow the standard Google Play Store regulations.</li>
+            <li><strong>Storage:</strong> To read and store EPUB/TXT book files.</li>
+            <li><strong>Camera:</strong> To update your profile picture (if requested).</li>
+            <li><strong>Notifications:</strong> For upload progress or new messages.</li>
         </ul>
 
-        <h2>6. Advertising</h2>
-        <ul>
-            <li>To provide free features, ePubHub displays ads via Google AdMob.</li>
-            <li>Partners may use the Android Advertising ID for personalized advertising. You can reset this ID in your device settings.</li>
-        </ul>
+        <h2>7. Advertising</h2>
+        <p>Ad partners (Google AdMob) may use your Advertising ID for personalized ads. You can manage this in your Google Settings.</p>
 
-        <h2>7. Disclaimer of Liability</h2>
+        <h2>8. Disclaimer of Liability</h2>
         <div class="disclaimer-box">
             <ul>
-                <li>ePubHub is a tool for personal file management and reading. We do not own or assume liability for the source or authenticity of user-exchanged data.</li>
-                <li>Data transmission is a voluntary activity between individuals. We shall be held harmless from any claims arising from users' utilization of the app to store or transmit content that infringes upon third-party intellectual property rights.</li>
+                <li>ePubHub is a tool for personal file management. We are not liable for the source or content of user-exchanged data.</li>
+                <li>Sharing is voluntary. We are held harmless from any intellectual property claims arising from user actions.</li>
             </ul>
         </div>
 
-        <h2>8. Data Deletion</h2>
-        <p>You can permanently delete your data via <strong>Account -> Delete Account</strong> within the app. All personal and cloud data will be removed immediately.</p>
+        <h2>9. Children's Privacy</h2>
+        <p>The app is not intended for children under 13. We do not knowingly collect data from minors. If such data is found, it will be deleted immediately.</p>
+
+        <h2>10. Changes to Policy</h2>
+        <p>We may update this policy. Changes are effective immediately upon posting.</p>
+
+        <h2>11. Data Deletion</h2>
+        <p>Permanently delete data via <strong>Account -> Delete Account</strong>. All cloud data will be wiped forever.</p>
 
         <div class="contact-box">
             <h2>Contact Us</h2>
-            <p>Support Email: <strong>aricphan@gmail.com</strong></p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 ePubHub Reader. All Rights Reserved.</p>
-    </footer>
-</div>
-
-<script>
-    function toggleLanguage() {
-        const vi = document.getElementById('content-vi');
-        const en = document.getElementById('content-en');
-        const btn = document.getElementById('langBtn');
-
-        if (vi.classList.contains('hidden')) {
-            vi.classList.remove('hidden');
-            en.classList.add('hidden');
-            btn.innerText = 'Switch to English';
-        } else {
-            vi.classList.add('hidden');
-            en.classList.remove('hidden');
-            btn.innerText = 'Chuyển sang Tiếng Việt';
-        }
-    }
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ePubHub Reader</title>
-    <style>
-        :root {
-            --primary-color: #1a73e8;
-            --bg-color: #f8f9fa;
-            --text-color: #2c3e50;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        .language-toggle {
-            position: sticky;
-            top: 10px;
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 30px;
-            z-index: 100;
-        }
-
-        .toggle-btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
-        }
-
-        .toggle-btn:hover {
-            transform: scale(1.05);
-            background-color: #1557b0;
-        }
-
-        h1 { color: var(--primary-color); text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px; }
-        h2 { color: #1967d2; margin-top: 30px; border-left: 4px solid var(--primary-color); padding-left: 15px; font-size: 1.4em; }
-        
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        
-        .hidden { display: none; }
-        
-        .contact-box {
-            background: #e8f0fe;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 40px;
-        }
-
-        .highlight-box {
-            background: #fff3cd;
-            border: 1px solid #ffeeba;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-
-        .disclaimer-box {
-            background: #fdf2f2;
-            border: 1px solid #fbd5d5;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-
-        footer { text-align: center; margin-top: 40px; color: #70757a; font-size: 0.9em; }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <div class="language-toggle">
-        <button id="langBtn" class="toggle-btn" onclick="toggleLanguage()">Switch to English</button>
-    </div>
-
-    <!-- NỘI DUNG TIẾNG VIỆT -->
-    <div id="content-vi">
-        <h1>Chính sách Bảo mật ePubHub</h1>
-        <p><em>Cập nhật lần cuối: 2 tháng 7, 2026</em></p>
-        
-        <p>Chào mừng bạn đến với ePubHub. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn và đảm bảo tính minh bạch trong việc xử lý dữ liệu.</p>
-
-        <h2>1. Dữ liệu Chúng tôi Thu thập</h2>
-        <ul>
-            <li><strong>Thông tin định danh:</strong> Email, Tên hiển thị và Ảnh đại diện (qua Google Sign-In) để quản lý tài khoản và định danh người dùng trong hội thoại.</li>
-            <li><strong>Mã định danh thiết bị:</strong> Android ID để quản lý phiên đăng nhập (tối đa 2 thiết bị/tài khoản).</li>
-            <li><strong>Tiến trình đọc sách:</strong> Vị trí chương và dòng đang đọc được đồng bộ lên Cloud để bạn có thể tiếp tục trải nghiệm trên nhiều thiết bị.</li>
-            <li><strong>Thống kê hoạt động:</strong> Tổng thời gian đọc/nghe, chuỗi ngày đọc và kết quả các trò chơi tích hợp.</li>
-        </ul>
-
-        <h2>2. Nội dung do Người dùng Tạo (UGC)</h2>
-        <ul>
-            <li><strong>Chat cộng đồng:</strong> Tin nhắn được lưu trữ trên Firebase để hiển thị trong phòng chat.</li>
-            <li><strong>Chia sẻ tệp:</strong> Tính năng Cloud cho phép lưu trữ tài liệu cá nhân. Hệ thống đóng vai trò trung gian kỹ thuật và <strong>không thực hiện tiền kiểm</strong> nội dung tải lên.</li>
-            <li><strong>Trách nhiệm cá nhân:</strong> Người dùng chịu trách nhiệm duy nhất và toàn bộ về tính pháp lý của tệp tin mình chia sẻ. Bạn xác nhận có đủ quyền sở hữu hoặc sử dụng hợp pháp đối với nội dung đó.</li>
-            <li><strong>Cơ chế báo cáo:</strong> Chúng tôi cung cấp nút Báo cáo (Report) và Chặn (Block) để cộng đồng giám sát. Nội dung vi phạm sẽ bị gỡ bỏ mà không cần thông báo trước.</li>
-        </ul>
-
-        <h2>3. Bảo mật Đặc biệt</h2>
-        <div class="highlight-box">
-            <strong>Mã hóa PGP/GPG:</strong> Mọi hoạt động giải mã diễn ra cục bộ trên máy bạn. Chúng tôi KHÔNG bao giờ lưu trữ Khóa bí mật (Private Key) hay nội dung sau giải mã của bạn.
-        </div>
-
-        <h2>4. Dịch vụ Bên thứ ba</h2>
-        <p>Ứng dụng tích hợp dịch vụ từ: Google Firebase (hạ tầng), Cloudinary (lưu trữ file), Microsoft Azure (giọng nói TTS), <strong>Google AdMob (quảng cáo)</strong> và <strong>Google Play Billing (thanh toán)</strong>.</p>
-
-        <h2>5. Thanh toán và Gói VIP</h2>
-        <ul>
-            <li><strong>Giao dịch:</strong> Mọi thanh toán mua gói VIP hoặc vật phẩm đều được thực hiện thông qua hệ thống thanh toán của Google Play. Chúng tôi không thu thập hay lưu trữ thông tin thẻ tín dụng của bạn.</li>
-            <li><strong>Quyền lợi VIP:</strong> Khi nâng cấp VIP, bạn được sử dụng các tính năng nâng cao (Video background, không quảng cáo...). Trạng thái VIP được liên kết với ID tài khoản của bạn.</li>
-            <li><strong>Hoàn tiền:</strong> Chính sách hoàn tiền tuân thủ theo quy định hiện hành của Google Play Store.</li>
-        </ul>
-
-        <h2>6. Quảng cáo</h2>
-        <ul>
-            <li>Để duy trì các tính năng miễn phí, ePubHub hiển thị quảng cáo từ Google AdMob.</li>
-            <li>Đối tác có thể thu thập mã định danh quảng cáo (Android Advertising ID) để cung cấp quảng cáo cá nhân hóa. Bạn có thể đặt lại mã này trong Cài đặt thiết bị của mình.</li>
-        </ul>
-
-        <h2>7. Giới hạn và Miễn trừ trách nhiệm</h2>
-        <div class="disclaimer-box">
-            <ul>
-                <li>ePubHub là công cụ hỗ trợ đọc và quản lý tệp tin cho mục đích cá nhân. Chúng tôi không sở hữu và không chịu trách nhiệm về nội dung dữ liệu do người dùng tự trao đổi.</li>
-                <li>Mọi hoạt động chia sẻ dữ liệu là sự thỏa thuận tự nguyện giữa các cá nhân. Chúng tôi được miễn trừ khỏi mọi khiếu nại phát sinh từ việc người dùng truyền tải nội dung vi phạm quyền sở hữu trí tuệ của bên thứ ba.</li>
-            </ul>
-        </div>
-
-        <h2>8. Quy trình Xóa Dữ liệu</h2>
-        <p>Bạn có thể xóa toàn bộ dữ liệu vĩnh viễn ngay trong ứng dụng tại mục <strong>Tài khoản -> Xóa tài khoản</strong>. Mọi thông tin cá nhân và dữ liệu trên Cloud sẽ bị xóa sạch ngay lập tức.</p>
-
-        <div class="contact-box">
-            <h2>Liên hệ</h2>
-            <p>Email hỗ trợ: <strong>aricphan@gmail.com</strong></p>
-        </div>
-    </div>
-
-    <!-- NỘI DUNG TIẾNG ANH (ẨN MẶC ĐỊNH) -->
-    <div id="content-en" class="hidden">
-        <h1>Privacy Policy - ePubHub</h1>
-        <p><em>Last Updated: July 2, 2026</em></p>
-
-        <p>Welcome to ePubHub. We are committed to protecting your privacy and ensuring transparency in data processing.</p>
-
-        <h2>1. Information We Collect</h2>
-        <ul>
-            <li><strong>Personal Info:</strong> Email, Display Name, and Profile Picture (via Google Sign-In) for account management.</li>
-            <li><strong>Device ID:</strong> Android ID to manage login sessions (max 2 devices).</li>
-            <li><strong>Reading Progress:</strong> Synced to Cloud for a seamless cross-device experience.</li>
-            <li><strong>Activity Stats:</strong> Total reading time, streaks, and game scores.</li>
-        </ul>
-
-        <h2>2. User-Generated Content (UGC)</h2>
-        <ul>
-            <li><strong>Community Chat:</strong> Messages are stored via Firebase to facilitate conversation.</li>
-            <li><strong>File Sharing:</strong> Cloud storage is provided for personal document management. The service acts as a technical intermediary and <strong>does not pre-screen</strong> uploaded content.</li>
-            <li><strong>User Responsibility:</strong> Users are solely responsible for the legality of the files they transmit. You represent that you hold all necessary rights for such content.</li>
-            <li><strong>Moderation:</strong> We provide Report and Block tools. Content violating community standards or laws will be removed without notice.</li>
-        </ul>
-
-        <h2>3. Specialized Security</h2>
-        <div class="highlight-box">
-            <strong>PGP/GPG Encryption:</strong> All decryption happens locally. We NEVER store Private Keys or decrypted content.
-        </div>
-
-        <h2>4. Third-Party Services</h2>
-        <p>We use: Google Firebase, Cloudinary, Microsoft TTS, <strong>Google AdMob (Ads)</strong>, and <strong>Google Play Billing (Payments)</strong>.</p>
-
-        <h2>5. Payments and VIP Subscription</h2>
-        <ul>
-            <li><strong>Transactions:</strong> All purchases are processed securely via Google Play Billing. We do not store your credit card information.</li>
-            <li><strong>VIP Benefits:</strong> Upgrading to VIP unlocks premium features (Video backgrounds, no ads). Your status is linked to your account ID.</li>
-            <li><strong>Refunds:</strong> Refund policies follow the standard Google Play Store regulations.</li>
-        </ul>
-
-        <h2>6. Advertising</h2>
-        <ul>
-            <li>To provide free features, ePubHub displays ads via Google AdMob.</li>
-            <li>Partners may use the Android Advertising ID for personalized advertising. You can reset this ID in your device settings.</li>
-        </ul>
-
-        <h2>7. Disclaimer of Liability</h2>
-        <div class="disclaimer-box">
-            <ul>
-                <li>ePubHub is a tool for personal file management and reading. We do not own or assume liability for the source or authenticity of user-exchanged data.</li>
-                <li>Data transmission is a voluntary activity between individuals. We shall be held harmless from any claims arising from users' utilization of the app to store or transmit content that infringes upon third-party intellectual property rights.</li>
-            </ul>
-        </div>
-
-        <h2>8. Data Deletion</h2>
-        <p>You can permanently delete your data via <strong>Account -> Delete Account</strong> within the app. All personal and cloud data will be removed immediately.</p>
-
-        <div class="contact-box">
-            <h2>Contact Us</h2>
-            <p>Support Email: <strong>aricphan@gmail.com</strong></p>
+            <p>Email: <strong>aricphan@gmail.com</strong></p>
         </div>
     </div>
 
