@@ -5,172 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - ePubHub Reader</title>
     <style>
-        :root { --primary-color: #1a73e8; --bg-color: #f8f9fa; --text-color: #2c3e50; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; }
-        .container { max-width: 850px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: relative; }
-        .language-toggle { position: sticky; top: 10px; display: flex; justify-content: flex-end; margin-bottom: 30px; z-index: 100; }
-        .toggle-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: transform 0.2s; }
-        .toggle-btn:hover { transform: scale(1.05); background-color: #1557b0; }
-        h1 { color: var(--primary-color); text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px; }
-        h2 { color: #1967d2; margin-top: 30px; border-left: 4px solid var(--primary-color); padding-left: 15px; font-size: 1.25em; }
+        :root { --primary: #1a73e8; --bg: #f8f9fa; --text: #2c3e50; --border: #e0e0e0; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .lang-toggle { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 30px; position: sticky; top: 10px; z-index: 100; }
+        .btn { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-weight: 600; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+        h1 { color: var(--primary); text-align: center; font-size: 2.2em; border-bottom: 2px solid var(--bg); padding-bottom: 20px; }
+        h2 { color: #1557b0; margin-top: 30px; border-left: 5px solid var(--primary); padding-left: 15px; font-size: 1.3em; }
+        .disclaimer { background: #fff5f5; border: 1px solid #feb2b2; padding: 20px; border-radius: 10px; margin: 20px 0; font-size: 0.95em; }
+        .info-box { background: #e8f0fe; padding: 20px; border-radius: 10px; margin: 20px 0; }
         ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
+        li { margin-bottom: 10px; }
         .hidden { display: none; }
-        .contact-box { background: #e8f0fe; padding: 20px; border-radius: 8px; margin-top: 40px; }
-        .highlight-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 5px; margin: 15px 0; font-size: 0.95em; }
-        .disclaimer-box { background: #fdf2f2; border: 1px solid #fbd5d5; padding: 15px; border-radius: 5px; margin: 15px 0; font-size: 0.95em; }
-        footer { text-align: center; margin-top: 40px; color: #70757a; font-size: 0.85em; }
+        footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.85em; color: #70757a; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="language-toggle">
-        <button id="langBtn" class="toggle-btn" onclick="toggleLanguage()">Switch to English</button>
+    <div class="lang-toggle">
+        <button class="btn" onclick="toggleLang('vi')">Tiếng Việt</button>
+        <button class="btn" onclick="toggleLang('en')">English</button>
     </div>
 
-    <!-- NỘI DUNG TIẾNG VIỆT -->
-    <div id="content-vi">
+    <!-- PHẦN TIẾNG VIỆT -->
+    <div id="vi-content">
         <h1>Chính sách Bảo mật ePubHub</h1>
-        <p><em>Cập nhật lần cuối: 2 tháng 7, 2026</em></p>
-        
-        <p>Chào mừng bạn đến với ePubHub Reader. Chúng tôi cam kết bảo vệ quyền riêng tư và đảm bảo tính minh bạch tối đa trong việc xử lý dữ liệu của bạn.</p>
+        <p style="text-align: center;"><em>Sử dụng ứng dụng đồng nghĩa với việc bạn đã đọc và chấp thuận các điều khoản này.</em></p>
 
-        <h2>1. Dữ liệu Thu thập & Mục đích</h2>
+        <h2>1. Thu thập và Sử dụng Dữ liệu</h2>
         <ul>
-            <li><strong>Định danh:</strong> Email, Tên và Ảnh đại diện (Google) dùng cho quản lý tài khoản và định danh trong Chat.</li>
-            <li><strong>Thiết bị:</strong> Android ID để bảo mật phiên đăng nhập (tối đa 2 thiết bị).</li>
-            <li><strong>Tiến trình:</strong> Đồng bộ vị trí chương/dòng sách đang đọc lên Cloud.</li>
-            <li><strong>Chẩn đoán:</strong> Nhật ký lỗi ẩn danh giúp cải thiện độ ổn định ứng dụng.</li>
+            <li><strong>Thông tin định danh:</strong> Email, Tên hiển thị và Ảnh đại diện được cung cấp qua Google Sign-In để quản lý tài khoản cá nhân.</li>
+            <li><strong>Mã định danh thiết bị:</strong> Android ID giúp duy trì phiên đăng nhập bảo mật và giới hạn thiết bị (tối đa 2 thiết bị/tài khoản).</li>
+            <li><strong>Tiến trình cá nhân:</strong> Vị trí chương/dòng sách và thống kê hoạt động được đồng bộ lên Cloud để phục vụ trải nghiệm người dùng.</li>
+            <li><strong>Dữ liệu kỹ thuật:</strong> Nhật ký lỗi ẩn danh (Crashlytics) nhằm cải thiện độ ổn định của ứng dụng.</li>
         </ul>
 
-        <h2>2. Nội dung Người dùng (UGC) & Bản quyền</h2>
-        <div class="disclaimer-box">
-            <strong>Miễn trừ trách nhiệm:</strong>
+        <h2>2. Nội dung do Người dùng Tạo (UGC) & Miễn trừ trách nhiệm</h2>
+        <div class="disclaimer">
+            <strong>Lưu ý quan trọng về trách nhiệm:</strong>
             <ul>
-                <li>ePubHub là công cụ kỹ thuật hỗ trợ đọc tệp tin cá nhân. Chúng tôi không kiểm soát nguồn gốc nội dung do người dùng tự tải lên.</li>
-                <li><strong>Trách nhiệm:</strong> Người dùng chịu trách nhiệm duy nhất về bản quyền tệp tin chia sẻ. Bạn cam kết có quyền hợp pháp sử dụng nội dung đó.</li>
-                <li><strong>Xử lý vi phạm:</strong> Chúng tôi tôn trọng quyền sở hữu trí tuệ. Nội dung vi phạm sẽ bị gỡ bỏ và tài khoản vi phạm có thể bị khóa vĩnh viễn.</li>
+                <li>ePubHub là công cụ hỗ trợ đọc và quản lý tệp tin cá nhân. Chúng tôi hoạt động như một bên trung gian kỹ thuật và <strong>không kiểm soát nội dung</strong> dữ liệu do người dùng tự tải lên hoặc chia sẻ.</li>
+                <li><strong>Trách nhiệm pháp lý:</strong> Người dùng chịu trách nhiệm duy nhất và toàn bộ đối với tính pháp lý cũng như bản quyền của các tệp tin được truyền tải.</li>
+                <li><strong>Chính sách bản quyền:</strong> Chúng tôi tôn trọng quyền sở hữu trí tuệ. Nếu nhận được báo cáo vi phạm hợp lệ, nội dung đó sẽ bị gỡ bỏ ngay lập tức. Chúng tôi có quyền khóa tài khoản vi phạm vĩnh viễn mà không cần báo trước.</li>
+                <li><strong>Liên kết ngoài:</strong> Chúng tôi không chịu trách nhiệm về nội dung của bất kỳ liên kết bên thứ ba nào được chia sẻ trong phòng chat cộng đồng.</li>
             </ul>
         </div>
 
-        <h2>3. Bảo mật & Mã hóa</h2>
+        <h2>3. Bảo mật và Mã hóa</h2>
         <ul>
-            <li><strong>Truyền tải:</strong> Toàn bộ dữ liệu được mã hóa qua HTTPS/TLS.</li>
-            <li><strong>Giải mã PGP/GPG:</strong> Chỉ diễn ra cục bộ trên máy bạn. Chúng tôi KHÔNG lưu giữ Khóa bí mật hay nội dung thô.</li>
-            <li><strong>Lưu trữ toàn cầu:</strong> Dữ liệu có thể được xử lý trên máy chủ quốc tế của Google và Cloudinary.</li>
+            <li><strong>Mã hóa truyền tải:</strong> Mọi dữ liệu giữa ứng dụng và máy chủ được mã hóa qua HTTPS/TLS 1.2+.</li>
+            <li><strong>Mã hóa đầu cuối:</strong> Đối với tệp PGP/GPG, quá trình giải mã diễn ra hoàn toàn cục bộ. Chúng tôi KHÔNG lưu trữ Khóa bí mật hay nội dung thô của bạn trên bất kỳ máy chủ nào.</li>
+            <li><strong>Cam kết:</strong> Chúng tôi cam kết không bán hoặc chia sẻ dữ liệu cá nhân của bạn cho bên thứ ba vì mục đích thương mại.</li>
         </ul>
 
-        <h2>4. Quyền truy cập & Dịch vụ bên thứ ba</h2>
+        <h2>4. Dịch vụ Bên thứ ba & Quảng cáo</h2>
+        <p>Ứng dụng tích hợp dịch vụ từ các đối tác uy tín: <a href="https://policies.google.com/privacy" target="_blank">Google</a> (Firebase, AdMob, Billing), Cloudinary và Microsoft. Các đối tác này có thể sử dụng mã định danh ẩn danh để cung cấp quảng cáo hoặc xử lý thanh toán. Bạn có thể quản lý mã quảng cáo trong Cài đặt thiết bị.</p>
+
+        <h2>5. Thanh toán và Gói VIP</h2>
+        <p>Mọi giao dịch mua gói VIP được xử lý an toàn qua Google Play Billing. Trạng thái VIP được liên kết với ID tài khoản để mở khóa các tính năng nâng cao (Video Background, tắt quảng cáo...).</p>
+
+        <h2>6. Quyền của bạn và Xóa dữ liệu</h2>
         <ul>
-            <li><strong>Quyền:</strong> Bộ nhớ (để đọc sách), Máy ảnh (để đổi ảnh đại diện).</li>
-            <li><strong>Đối tác:</strong> Google (Firebase, AdMob, Billing), Cloudinary, Microsoft Azure.</li>
+            <li>Bạn có quyền truy cập, yêu cầu chỉnh sửa hoặc xóa dữ liệu cá nhân bất cứ lúc nào.</li>
+            <li><strong>Xóa tài khoản:</strong> Bạn có thể xóa vĩnh viễn toàn bộ dữ liệu trong ứng dụng tại mục <strong>Tài khoản -> Xóa tài khoản</strong> hoặc gửi yêu cầu qua email hỗ trợ. Dữ liệu Cloud sẽ bị hủy bỏ ngay lập tức.</li>
         </ul>
 
-        <h2>5. Thanh toán & Quảng cáo</h2>
-        <ul>
-            <li>Thanh toán qua Google Play Billing an toàn và bảo mật.</li>
-            <li>Quảng cáo AdMob sử dụng mã ID ẩn danh để hiển thị nội dung phù hợp.</li>
-        </ul>
+        <h2>7. Quyền riêng tư của trẻ em</h2>
+        <p>Ứng dụng không dành cho trẻ em dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin từ đối tượng này. Nếu có sự cố rò rỉ dữ liệu, chúng tôi sẽ thông báo cho người dùng trong vòng 72 giờ.</p>
 
-        <h2>6. Miễn trừ trách nhiệm kỹ thuật</h2>
-        <p>Ứng dụng được cung cấp "nguyên trạng". Chúng tôi không chịu trách nhiệm về bất kỳ sự cố mất dữ liệu hoặc gián đoạn dịch vụ nào phát sinh trong quá trình sử dụng.</p>
-
-        <h2>7. Quyền của bạn & Xóa dữ liệu</h2>
-        <ul>
-            <li>Bạn có quyền truy cập hoặc yêu cầu xóa dữ liệu cá nhân của mình.</li>
-            <li>Xóa tài khoản vĩnh viễn tại mục <strong>"Tài khoản -> Xóa tài khoản"</strong> ngay trong ứng dụng.</li>
-        </ul>
-
-        <h2>8. Trẻ em</h2>
-        <p>Ứng dụng không dành cho trẻ em dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin từ trẻ em.</p>
-
-        <div class="contact-box">
-            <h2>Liên hệ Hỗ trợ</h2>
-            <p>Email: <strong>aricphan@gmail.com</strong></p>
+        <div class="info-box">
+            <strong>Liên hệ và Báo cáo:</strong><br>
+            Mọi thắc mắc, báo cáo vi phạm bản quyền hoặc yêu cầu trích xuất dữ liệu, vui lòng gửi về:<br>
+            Email: <strong>aricphan@gmail.com</strong>
         </div>
     </div>
 
-    <!-- ENGLISH CONTENT -->
-    <div id="content-en" class="hidden">
+    <!-- PHẦN TIẾNG ANH -->
+    <div id="en-content" class="hidden">
         <h1>Privacy Policy - ePubHub</h1>
-        <p><em>Last Updated: July 2, 2026</em></p>
+        <p style="text-align: center;"><em>By using this application, you agree to these terms and conditions.</em></p>
 
-        <p>Welcome to ePubHub Reader. We are committed to protecting your privacy and ensuring maximum transparency.</p>
-
-        <h2>1. Data Collection & Purpose</h2>
+        <h2>1. Data Collection and Usage</h2>
         <ul>
-            <li><strong>Identity:</strong> Email, Name, and Picture (via Google) for account and chat.</li>
-            <li><strong>Device ID:</strong> Android ID for secure session management.</li>
-            <li><strong>Progress:</strong> Reading positions synced to Cloud.</li>
-            <li><strong>Diagnostics:</strong> Anonymous crash logs for stability.</li>
+            <li><strong>Identity:</strong> Email, Name, and Avatar (via Google Sign-In) for personal account management.</li>
+            <li><strong>Device ID:</strong> Android ID for secure session management (max 2 devices per account).</li>
+            <li><strong>Progress:</strong> Reading positions and activity stats synced to Cloud for user experience.</li>
+            <li><strong>Technical Data:</strong> Anonymous crash logs to improve app stability.</li>
         </ul>
 
-        <h2>2. User Content (UGC) & Copyright</h2>
-        <div class="disclaimer-box">
-            <strong>Disclaimer:</strong>
+        <h2>2. User-Generated Content (UGC) & Liability Disclaimer</h2>
+        <div class="disclaimer">
+            <strong>Legal Disclaimer:</strong>
             <ul>
-                <li>ePubHub is a technical tool for personal file management. We do not control user-uploaded files.</li>
-                <li><strong>Responsibility:</strong> Users are solely liable for the legality of shared files.</li>
-                <li><strong>Copyright Policy:</strong> We respect intellectual property. Infringing content will be removed, and violators may be banned.</li>
+                <li>ePubHub is a technical tool for personal file management. We act as a technical intermediary and <strong>do not monitor</strong> user-uploaded files or shared content.</li>
+                <li><strong>User Responsibility:</strong> Users are solely liable for the legality and copyright of the files they transmit.</li>
+                <li><strong>Copyright Policy:</strong> We respect intellectual property rights. Infringing content will be removed upon verified reports, and repeat offenders' accounts may be terminated without notice.</li>
+                <li><strong>External Links:</strong> We are not responsible for the content of any third-party links shared in community chats.</li>
             </ul>
         </div>
 
-        <h2>3. Security & Data Transfer</h2>
+        <h2>3. Security and Encryption</h2>
         <ul>
-            <li><strong>Transit:</strong> All data is encrypted using HTTPS/TLS.</li>
-            <li><strong>PGP/GPG:</strong> Decryption happens strictly locally. We NEVER store Private Keys.</li>
-            <li><strong>Global Storage:</strong> Data may be processed on international servers.</li>
+            <li><strong>Encryption in Transit:</strong> All data is secured via HTTPS/TLS 1.2+ protocols.</li>
+            <li><strong>End-to-End:</strong> For PGP/GPG files, decryption is strictly local. We NEVER store Private Keys or raw content on our servers.</li>
+            <li><strong>Commitment:</strong> We never sell or share your personal data with third parties for marketing purposes.</li>
         </ul>
 
-        <h2>4. Permissions & Third-Party</h2>
+        <h2>4. Third-Party Services & Ads</h2>
+        <p>We rely on trusted partners: <a href="https://policies.google.com/privacy" target="_blank">Google</a> (Firebase, AdMob, Billing), Cloudinary, and Microsoft. These partners may use anonymous IDs for advertising or payment processing.</p>
+
+        <h2>5. Payments and VIP Subscription</h2>
+        <p>All transactions are securely handled via Google Play Billing. VIP status is linked to your account ID to unlock premium features.</p>
+
+        <h2>6. Your Rights and Data Deletion</h2>
         <ul>
-            <li><strong>Permissions:</strong> Storage (to read books), Camera (for avatars).</li>
-            <li><strong>Partners:</strong> Google (Firebase, AdMob, Billing), Cloudinary, Microsoft.</li>
+            <li>You have the right to access, rectify, or delete your personal data at any time.</li>
+            <li><strong>Account Deletion:</strong> Permanently wipe all data via <strong>Settings -> Delete Account</strong> or by contacting us via email. Cloud data will be removed immediately.</li>
         </ul>
 
-        <h2>5. Payments & Ads</h2>
-        <ul>
-            <li>Payments are handled via Google Play Billing.</li>
-            <li>AdMob uses anonymous IDs for relevant advertising.</li>
-        </ul>
+        <h2>7. Children's Privacy</h2>
+        <p>This app is not intended for children under 13. We do not knowingly collect data from minors. In the event of a data breach, users will be notified within 72 hours.</p>
 
-        <h2>6. Technical Disclaimer</h2>
-        <p>The app is provided "As Is." We are not responsible for any data loss or service interruptions.</p>
-
-        <h2>7. Your Rights & Deletion</h2>
-        <ul>
-            <li>You have the right to access or delete your data.</li>
-            <li>Permanently delete data via <strong>"Account -> Delete Account"</strong> in the app.</li>
-        </ul>
-
-        <h2>8. Children's Privacy</h2>
-        <p>The app is not for children under 13. We do not knowingly collect data from minors.</p>
-
-        <div class="contact-box">
-            <h2>Support Contact</h2>
-            <p>Email: <strong>aricphan@gmail.com</strong></p>
+        <div class="info-box">
+            <strong>Contact and Reporting:</strong><br>
+            For support, copyright infringement reports, or data requests:<br>
+            Email: <strong>aricphan@gmail.com</strong>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 ePubHub Reader. All Rights Reserved.</p>
+        <p>&copy; 2026 ePubHub Reader. All Rights Reserved. Subject to the laws of Vietnam.</p>
     </footer>
 </div>
 
 <script>
-    function toggleLanguage() {
-        const vi = document.getElementById('content-vi');
-        const en = document.getElementById('content-en');
-        const btn = document.getElementById('langBtn');
-        if (vi.classList.contains('hidden')) {
+    function toggleLang(lang) {
+        const vi = document.getElementById('vi-content');
+        const en = document.getElementById('en-content');
+        if (lang === 'vi') {
             vi.classList.remove('hidden');
             en.classList.add('hidden');
-            btn.innerText = 'Switch to English';
         } else {
             vi.classList.add('hidden');
             en.classList.remove('hidden');
-            btn.innerText = 'Chuyển sang Tiếng Việt';
         }
     }
 </script>
